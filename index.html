@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudyHub</title>
+  </head>
+  <body>
+    <button onclick="openApp()">Open StudyHub</button>
+
+    <script>
+      async function openApp() {
+        const proxy = "https://quiet-oasis-proxy.YOUR_REPL_USERNAME.repl.co/fetch?url=https://beta.character.ai";
+        const res = await fetch(proxy);
+        const text = await res.text();
+        const tab = window.open("about:blank");
+        tab.document.write(text);
+      }
+    </script>
+  </body>
+</html>
